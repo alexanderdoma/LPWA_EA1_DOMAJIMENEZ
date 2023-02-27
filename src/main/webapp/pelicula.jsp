@@ -7,7 +7,6 @@
 Pelicula objPelicula = (Pelicula) session.getAttribute("data");
 %>
 <div class="contenido-interno" id="contenido-interno">
-<br/><h1>8</h1><br/>
 <div class="contenido-pelicula">
 	<div class="datos-pelicula">
 		<h2><%= objPelicula.getTitulo() %></h2>
@@ -20,7 +19,7 @@ Pelicula objPelicula = (Pelicula) session.getAttribute("data");
 			</div>
 			<div class="fila">
 				<div class="celda-titulo">Estreno :</div>
-				<div class="celda"><%= objPelicula.getFechaEstreno() %></div>
+				<div class="celda"><%=objPelicula.getFechaEstreno()%></div>
 			</div>
 			<div class="fila">
 				<div class="celda-titulo">Género :</div>
