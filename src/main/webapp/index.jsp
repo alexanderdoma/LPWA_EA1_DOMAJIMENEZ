@@ -23,10 +23,12 @@
 			  
 				<%	Object id = session.getAttribute("id"); 
 					if ( id == null ) { %>
-				<% } else if ( id.equals("peliculas") ) { %> <%@include file="peliculas.jsp" %>
+				<% } else if ( id.equals("cartelera") ) { %> <%@include file="peliculas.jsp" %>
+				<% } else if ( id.equals("estrenos") ) { %> <%@include file="peliculas.jsp" %>
 				<% } else if (id.equals("listarCines") ){ %> <%@include file="cines.jsp" %>
 				<% }else if (id.equals("buscarCine")){%> <%@include file="cine.jsp" %>
-				<%} %>					
+				<% }else if (id.equals("buscarPelicula")){ %> <%@include file="pelicula.jsp"%>
+				<%} %>				
 				
 			</div>
 		</div>

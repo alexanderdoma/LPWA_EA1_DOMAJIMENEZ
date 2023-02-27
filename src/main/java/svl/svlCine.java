@@ -34,15 +34,15 @@ public class svlCine extends HttpServlet {
 		String id = request.getParameter("id");
 		
 		switch(id) {
-		case "listarCines":
-				List<Cine> listCines = new dao.CineDAO().getCines();
-				session.setAttribute("id", listCines == null ? null : "listarCines");
-				session.setAttribute("data", listCines);
-			break;
-		case "buscarCine":
-				Cine objCine = new dao.CineDAO().getCine(Integer.parseInt(request.getParameter("idCine")));
-				session.setAttribute("id", objCine == null ? null : "buscarCine");
-				session.setAttribute("data", objCine);
+			case "listarCines":
+					List<Cine> listCines = new dao.CineDAO().getCines();
+					session.setAttribute("id", listCines == null ? null : "listarCines");
+					session.setAttribute("data", listCines);
+				break;
+			case "buscarCine":
+					Cine objCine = new dao.CineDAO().getCine(Integer.parseInt(request.getParameter("idCine")));
+					session.setAttribute("id", objCine == null ? null : "buscarCine");
+					session.setAttribute("data", objCine);
 			break;
 		}
 		response.sendRedirect("index.jsp");
